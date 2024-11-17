@@ -12,3 +12,7 @@
 Aplikacja mobilna znajduje się w folderze `frontend`. Tam tworzy się wygląd aplikacji.
 
 Serwer znajduje się w folderze `backend`. Tam znajduje się logika aplikacji i REST api.
+
+## Swagger
+
+Swagger to dokumentacja do API. Dostępna jest pod linkiem: http://localhost:3006/documentation
