@@ -1,7 +1,21 @@
 import { FastifyInstance } from 'fastify';
 
-import indexController from './controller/indexController';
-
 export default async function router(fastify: FastifyInstance) {
- fastify.register(indexController, { prefix: '/' });
+ fastify.get(
+  '/',
+  {
+   schema: {
+    description: 'Powitanie do API',
+    tags: ['welcome'],
+    response: {
+     200: {
+      type: 'string',
+     },
+    },
+   },
+  },
+  async function handler(request, reply) {
+   return { hello: 'world' };
+  }
+ );
 }

@@ -10,4 +10,5 @@
 ## Informacje o projekcie
 
 Aplikacja mobilna znajduje się w folderze `frontend`. Tam tworzy się wygląd aplikacji.
+
 Serwer znajduje się w folderze `backend`. Tam znajduje się logika aplikacji i REST api.

@@ -1,10 +1,22 @@
 import fastify from 'fastify';
 import router from './router';
 import cors from '@fastify/cors';
+import swagger from '@fastify/swagger';
+import swaggerUI from '@fastify/swagger-ui';
 
 const server = fastify({
  // Logger only for production
  logger: !!(process.env.NODE_ENV !== 'development'),
+});
+
+server.register(swagger);
+
+server.register(swaggerUI, {
+ routePrefix: '/documentation',
+ uiConfig: {
+  docExpansion: 'full',
+  deepLinking: false,
+ },
 });
 
 // Register CORS
